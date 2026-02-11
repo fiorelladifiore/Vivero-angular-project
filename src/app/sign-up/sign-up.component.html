@@ -1,0 +1,34 @@
+<form [formGroup]="formSignUp" >
+  <div class="mb-3" [class.invalid]="formSignUp.get('email')?.invalid">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email">
+
+    @if (formSignUp.get('email')?.hasError('email')){
+        <p>Ingrese un mail válido</p>
+    }@else if(formSignUp.get('email')?.hasError('required')){
+        <p>Complete el campo</p>
+    }
+  </div>
+  <div class="mb-3" [class.invalid]="formSignUp.get('password')?.invalid">
+    <label for="password" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+      @if(formSignUp.get('password')?.hasError('required')){
+        <p>Complete el campo</p>
+    }@else if(formSignUp.get('password')?.hasError('minlength')){
+        <p>La contraseña debe tener un mínimo de 8 caracteres</p>
+    }
+  </div>
+   <div class="mb-3" [class.invalid]="formSignUp.get('password2')?.invalid">
+    <label for="password2" class="form-label">Reingrese su contraseña</label>
+    <input type="password" class="form-control" id="password2" formControlName="password2">
+    @if(formSignUp.hasError('passwordMismatch')){
+        <p>Las contraseñas no coinciden</p>
+    }
+  </div>
+  <div class="mb-3 form-check" [class.invalid]="formSignUp.get('checkbox')?.invalid">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="checkbox">
+    <label class="form-check-label" for="exampleCheck1">Acepto términos y condiciones</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="formSignUp.invalid">Registrarse</button>
+</form>
+

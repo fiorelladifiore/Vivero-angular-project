@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .home1{
   width:100%;
-  height: auto;
   align-items: center;
   margin: auto auto;
-  padding: 10px;
+  padding-bottom: 50px;
+
+}
+
+img{
+  height: 690px;
 }
 
 
@@ -19,7 +23,8 @@
 
 
 .btn{
-  font-family: "Bebas Neue", sans-serif;
+     font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
   font-weight: 200;
   font-style: normal;
   background-color: #e8cd8e;
@@ -32,17 +37,16 @@
 
 
 .carousel-caption{
-  text-shadow:
-  -1px -1px 0 rgb(6, 37, 7),  
-   1px -1px 0 rgb(6, 37, 7),
-  -1px  1px 0 rgb(6, 37, 7),
-   1px  1px 0 rgb(6, 37, 7);
   letter-spacing: 2px;
-  color: #ffe5d1;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
+  color: rgb(250, 243, 234);
+ min-height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+h1{
+  font-size: 60px;
 }
 
 @media (max-width: 767px) {

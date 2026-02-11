@@ -4,14 +4,16 @@ nav {
 }
 
 .nav-link{
-  color: antiquewhite;
+  color: rgb(250, 243, 234);
 }
 
 .nav-link, footer, h4{
-  font-family: Muli, sans-serif;
-  font-size: 15px;
+      font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+  font-size: 19px;
   letter-spacing: 2px;
 }
+
 
 footer{
   color: #1c3209;
@@ -23,6 +25,10 @@ footer{
   justify-content: space-around;
 }
 
+#navbarNav{
+  display: flex;
+  justify-content: space-around;
+}
 
 
 .container{
@@ -54,8 +60,28 @@ footer{
 
 }
 
-.navbar-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+}
+
+.search-input {
+  border-radius: 20px;
+}
+
+.search-btn {
+  background-color: antiquewhite;
+  border-radius: 20px;
+}
+
+.login-btn {
+  background-color: antiquewhite;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.login-btn:hover,
+.search-btn:hover {
+  background-color: #e5f9d5;
 }
