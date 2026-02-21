@@ -15,9 +15,9 @@ export class ViveroHomeComponent {
       image1: "https://i.ibb.co/Ndvz6W7J/carousel1-1.png",
       image2: "https://i.ibb.co/DHCGNb9p/carousel2-2.png",
       image3: "https://i.ibb.co/chrzhbKz/carousel3-1.png",
-      image4: "https://i.ibb.co/RkkpyY1B/mediodepago.png",
-      image5: "https://i.ibb.co/XB0LzqJ/image5.jpg",
-      image6: "https://i.ibb.co/F43cGHDY/image6.jpg",
+      image4: "https://i.ibb.co/sd53Zq2p/home2.jpg",
+      image5: "https://i.ibb.co/xKRKjqtC/staff1.jpg",
+      image6: "https://i.ibb.co/0SQPn24/home-Banner1.png",
       image7: "https://i.ibb.co/whTnHwHT/image7.jpg",
     }
 }

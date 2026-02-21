@@ -1,19 +1,56 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .home1{
   width:100%;
   align-items: center;
   margin: auto auto;
   padding-bottom: 50px;
-
-}
-
-img{
+  img{
   height: 690px;
 }
 
+}
 
 
+.home2 {
+  display: flex;
+  min-height: 80vh;
+}
+
+.imgh2 {
+  flex: 1;
+}
+
+.imgh2 img {
+  border-radius: 10px;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.h2text {
+  color: #000000;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px;
+  font-family: 'Nunito', sans-serif;
+  h1{
+    color: #4d673a;
+  }
+  p{
+    font-size: 25px;
+     text-align: center
+
+  }
+}
+
+
+
+.h3{
+  flex-direction: row-reverse;
+}
 .allHome{
   align-items: center;
   display: flex;
@@ -30,23 +67,47 @@ img{
   background-color: #e8cd8e;
   text-decoration-color: #1c3209;
   color: #1c3209;
-  border: 2px solid #1c3209;
+  border: 2px solid #254b0c;
 }
-
-
 
 
 .carousel-caption{
   letter-spacing: 2px;
   color: rgb(250, 243, 234);
- min-height: 600px;
+  min-height: 600px;
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
+    font-size: 25px;
 }
+
 h1{
   font-size: 60px;
+}
+
+
+.btn2{
+  color: #ffffff;
+   font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    font-size: 30px;
+
+  background-color: #4d673a;
+  border-radius:5px;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+
 }
 
 @media (max-width: 767px) {
@@ -56,29 +117,6 @@ h1{
   }
 }
 
-.cards{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 
-.subt{
-  padding: 5px;
-  color: #415e27;
-  font-family: "Bebas Neue", sans-serif;
-}
 
-.card{
-  color: #2b3f19;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1px;
-  background-color: #eee0c2;
-}
-
-.home4{
-  display: flex;
-  flex-direction: column;
-}
 

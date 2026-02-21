@@ -14,26 +14,21 @@
       }
     </div>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav w-50 justify-content-evenly">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/']">INICIO</a>
+          <a class="nav-link" [routerLink]="['/']">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/plants']">CATÁLOGO</a>
+          <a class="nav-link" [routerLink]="['/plants']">Plantas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']">QUIÉNES SOMOS</a>
+          <a class="nav-link" [routerLink]="['/plants']">Deco</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">Quiénes somos</a>
         </li>
       </ul>
-         <!-- buscador -->
-      <form class="d-flex me-3" role="search">
-        <input class="form-control search-input"
-               type="search"
-               placeholder="Buscar plantas...">
-        <button class="btn search-btn ms-2" type="submit">
-          Buscar
-        </button>
-      </form>
+
 
       <!-- login -->
       <button class="btn login-btn me-3" [routerLink]="['/signUp']">
@@ -47,12 +42,12 @@
 </div>
 <footer>
   <div class="foot1">
-    <h4>AYUDA</h4>
+    <h4>Ayuda</h4>
     <p> Términos y condiciones</p>
     <p>Preguntas frecuentes</p>
   </div>
   <div class="foot2">
-    <h4>CONTACTO</h4>
+    <h4>Contacto</h4>
     <p>{{tel}}</p>
     <p>{{email}}</p>
   </div>
