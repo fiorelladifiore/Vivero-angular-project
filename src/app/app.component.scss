@@ -1,9 +1,11 @@
 
 nav, footer{
-  padding-left: 70px;
   background-color: #4d673a;
 }
 
+.navbar-brand{
+  padding-left: 40px;
+}
 .nav-link{
 
   color: #faf3ea;
@@ -27,21 +29,13 @@ footer{
   justify-content: space-around;
 }
 
-.navbar-nav, #navbarNav{
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 100px;
-}
-
 .navbar-nav{
-  padding-right: 100px;
+    gap: 30px;
+    padding-right: 100px;
 }
 
-.nav-item{
-  padding-left: 10px;
-  padding-right: 30px;
-}
+
+
 
 
 
@@ -61,6 +55,7 @@ footer{
 
 .cartimg{
   width: 50px;
+  
   background-color: transparent;
   align-items: flex-end;
 }
@@ -72,10 +67,21 @@ footer{
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .navbar-brand img {
-    height: 50px;
+    height: 100px;
   }
+    footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+    .navbar-nav {
+      padding-right: 0px;
+      align-items: center;
+  }
+
+
 }
 
 .search-input {
@@ -90,7 +96,6 @@ footer{
    font-family: 'Nunito', sans-serif;
     line-height: 1.5;
     font-size: 20px;
-
   background-color: rgb(250, 243, 234);
   border-radius:5px;
 }
