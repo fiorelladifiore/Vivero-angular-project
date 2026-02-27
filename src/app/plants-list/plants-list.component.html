@@ -1,59 +1,94 @@
-
 @if(loading){
-<div class="d-flex justify-content-center align-items-center" style="height: 1000px;">
-  <div class="spinner-border text-success" role="status">
-    <span class="visually-hidden">Cargando...</span>
+  <div class="d-flex justify-content-center align-items-center" style="height: 600px;">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+} @else {
+
+<div class="container py-5">
+  <div class="row g-4">
+
+    @for (plant of filledPlants; track $index) {
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+        @if(!plant.placeholder){
+
+          <div class="plant-card h-100">
+
+            <div class="img-container">
+              <img [src]="plant.image" [alt]="plant.name">
+              @if(plant.clearance){
+                <span class="badge-sale">Oferta</span>
+              }
+            </div>
+
+            <div class="card-body">
+
+              <h5>{{plant.name | titlecase}}</h5>
+              <p class="plant-type">{{plant.type}}</p>
+
+              @if(plant.clearance){
+                <p class="price sale">
+                  {{plant.price | currency}}
+                </p>
+              } @else {
+                <p class="price">
+                  {{plant.price | currency}}
+                </p>
+              }
+
+              @if(plant.stock > 0){
+
+                <app-input-integer
+                  [(quantity)]="plant.quantity"
+                  [max]="plant.stock"
+                  (maxReached)="maxReached($event)"
+                  (minReached)="minReached($event)">
+                </app-input-integer>
+
+                @if(plant.quantity){
+                  <button class="btn buy-btn w-100 mt-3"
+                          (click)="addToCart(plant)">
+                    Agregar al carrito
+                  </button>
+                }
+
+              } @else {
+                <span class="badge bg-secondary w-100 mt-2">
+                  Sin stock
+                </span>
+              }
+
+            </div>
+          </div>
+
+        } @else {
+
+          <div class="plant-card h-100 placeholder-card">
+            <div class="img-container d-flex align-items-center justify-content-center">
+              <span class="placeholder-icon">🌱</span>
+            </div>
+
+            <div class="card-body text-center">
+              <h5>No disponible</h5>
+              <p class="text-muted">Próximamente más plantas</p>
+            </div>
+          </div>
+
+        }
+
+      </div>
+
+    } @empty {
+
+      <div class="col-12">
+        <p class="text-center">No hay plantas disponibles 🌿</p>
+      </div>
+
+    }
+
   </div>
 </div>
-}@else{
-<div class="table-responsive">
-<table class="table table-bordered text-center">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Nombre</th>
-      <th>Tipo</th>
-      <th>Precio</th>
-      <th>Stock</th>
-      <th>Cantidad</th>
-      <th>Comprar</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    @for (plant of plants; track plant.name){
-    <tr>
-      <td><img [src]="plant.image" [alt]="plant.image" width="100" height="100"></td>
-      <td>{{plant.name | titlecase}}</td>
-      <td>{{plant.type}}</td>
-      @if(plant.clearance){
-      <td class="sale">Oferta {{plant.price | currency}}</td>
-      }@else{
-        <td>{{plant.price | currency}}</td>
-      }
-      @if(plant.stock>0){
-      <td>{{plant.stock}}</td>
-      }@else{
-      <td><span class="badge text-bg-success">sin stock!</span></td>
-      }
-        @if(plant.stock){
-          <td>
-              <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)" (minReached)="minReached($event)"></app-input-integer>
-          </td>
-          <td>
-            @if(plant.quantity){
-          <button class="btn btn-secondary" (click)="addToCart(plant)">Comprar</button>
-            }
-          </td>
-        }
-    </tr>
-    } @empty{
-      <tr>
-        <td colspan="4">No hay plantas existentes</td>
-      </tr>
-    }
-  </tbody>
-</table>
-</div>
-
-
 }

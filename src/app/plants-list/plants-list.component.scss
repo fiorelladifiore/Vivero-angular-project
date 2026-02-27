@@ -1,39 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-td {
-  width: 120px;
-  vertical-align: middle;
-  background: transparent;
-  border: transparent;
-  font-family: "Rubik", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.plant-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-th{
-  border: #2d3a22 ;
-  background: transparent;
-  font-family: "Rubik", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.plant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
-
-.sale{
-  color: red;
+.img-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
 }
 
-table{
-  background-color: transparent;
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-button{
-  white-space: nowrap;
-  max-width: 100px;
-  background-color: #2d3a22;
-
+.badge-sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #aa2915;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
 
+.plant-type {
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.sale {
+  color: #c0392b;
+}
+
+.buy-btn {
+  background-color: #4d673a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+}

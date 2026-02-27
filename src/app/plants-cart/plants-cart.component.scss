@@ -2,7 +2,7 @@
 body {
   width: 100%;
   flex-direction: column;
-  font-family: "Rubik", serif;
+  font-family: 'Nunito', sans-serif;
    font-optical-sizing: auto;
    font-weight: 300;
    font-style: normal;
@@ -25,11 +25,10 @@ body {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #2d6a4f;
+  color: #4d673a;
   margin-bottom: 20px;
 }
 .cart-item {
-  font-family: "Rubik", serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -56,14 +55,14 @@ body {
   color: #1b4332;
 }
 .cart-item-price {
-  color: #40916c;
+  color: #4d673a;
 }
 .cart-item-actions {
   display: flex;
   align-items: center;
 }
 .quantity-btn {
-  background: #2d6a4f;
+  background: #4d673a;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -78,13 +77,13 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
-  color: #2d6a4f;
+  color: #4d673a;
 }
 .checkout-btn {
   display: block;
   width: 100%;
   padding: 10px;
-  background: #40916c;
+  background: #4d673a;
   color: white;
   text-align: center;
   border-radius: 5px;

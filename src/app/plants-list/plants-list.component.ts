@@ -3,6 +3,9 @@ import {Plants} from './Plants';
 import {PlantCartService} from '../plant-cart.service';
 import {PlantDataService} from '../plant-data.service';
 
+type PlantItem =
+  | (Plants & { placeholder?: false })
+  | { placeholder: true };
 
 @Component({
   selector: 'app-plants-list',
@@ -13,6 +16,7 @@ import {PlantDataService} from '../plant-data.service';
 export class PlantsListComponent implements OnInit{
   loading: boolean = true;
   plants: Plants[] = [];
+
 
   constructor(
     private cart: PlantCartService,
@@ -54,6 +58,22 @@ export class PlantsListComponent implements OnInit{
       }
     });
   }
+
+get filledPlants(): PlantItem[] {
+  const items: PlantItem[] = [...this.plants];
+
+  const remainder = items.length % 4;
+
+  if (remainder !== 0) {
+    const placeholdersToAdd = 4 - remainder;
+
+    for (let i = 0; i < placeholdersToAdd; i++) {
+      items.push({ placeholder: true });
+    }
+  }
+
+  return items;
+}
 
 
 
