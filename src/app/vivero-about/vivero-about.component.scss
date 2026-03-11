@@ -1,7 +1,6 @@
 
 
 body {
-  background-color: #4d673a !important;
   font-family: 'Nunito', sans-serif;
    font-optical-sizing: auto;
    font-weight: 300;
@@ -11,8 +10,9 @@ body {
 }
 .container {
   background-color: #4d673a;
+  background-blend-mode: overlay;
   margin: 100px auto;
-  padding: 90px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -28,7 +28,7 @@ h2{
   font-weight: 300;
   font-style: normal;
   color: #fcfffa;
-  font-size: 50px;
+  font-size: 40px;
 }
 p {
   padding: 20px;

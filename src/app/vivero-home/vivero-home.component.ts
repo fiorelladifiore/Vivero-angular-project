@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class ViveroHomeComponent {
   imagenes=
     {
-      image1: "https://i.ibb.co/Ndvz6W7J/carousel1-1.png",
+      image1: "/img/carousel1-1.png",
       image2: "https://i.ibb.co/DHCGNb9p/carousel2-2.png",
       image3: "https://i.ibb.co/chrzhbKz/carousel3-1.png",
       image4: "https://i.ibb.co/sd53Zq2p/home2.jpg",
