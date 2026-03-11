@@ -1,14 +1,7 @@
 
 
-body {
-  font-family: 'Nunito', sans-serif;
-   font-optical-sizing: auto;
-   font-weight: 300;
-   font-style: normal;
-  margin: 0;
-  padding: 0;
-}
 .container {
+  
   background-color: #4d673a;
   background-blend-mode: overlay;
   margin: 100px auto;
@@ -17,6 +10,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 img {
   padding: 5px;
   width: 100%;

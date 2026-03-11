@@ -4,11 +4,16 @@ table{
 
 body{
 
-background-image: url('/img/leavesbackground.jpg');
+background-color: #faf3ea;
 
-background-position: center;
-object-fit: cover;
-background-size: 50%;
 
+
+}
+
+.about-bg{
+  background-image: url('/img/leavesbackground.jpg');
+  background-size: cover;
+  background-position: center;
+ background-size: 50%;
 
 }

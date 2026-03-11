@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy  } from '@angular/core';
 
 @Component({
   selector: 'app-vivero-about',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './vivero-about.component.html',
   styleUrl: './vivero-about.component.scss'
 })
-export class ViveroAboutComponent {
+export class ViveroAboutComponent implements OnInit, OnDestroy{
+  
   imagen=
     {
       image1: "https://i.ibb.co/dJfTBFGJ/quienssomos1.jpg",
@@ -15,4 +16,12 @@ export class ViveroAboutComponent {
       image3: "https://i.ibb.co/ymkff1jJ/quienessomos3.jpg",
       image4: "https://i.ibb.co/nNdsXZLd/leavesbackground.jpg"
     }
+
+    ngOnInit() {
+    document.body.classList.add('about-bg');
+  }
+
+  ngOnDestroy() {
+    document.body.classList.remove('about-bg');
+  }
 }
